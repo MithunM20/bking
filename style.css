@@ -1,0 +1,278 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+header {
+    background-color: #dad7d7; 
+    padding: 15px 0;
+    width: 100%; 
+    box-sizing: border-box;
+}
+
+
+header nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 50px;
+}
+
+header nav ul li a {
+    color: rgb(113, 107, 107);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav ul li a:active{
+    color: #ff9600;
+}
+
+header nav ul img{
+    width: 80px;
+    height: auto;
+    margin-right: 200px;
+}
+
+.restaurant-info {
+    width: 100%;
+    background-color: rgb(249, 243, 243);
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 1px;
+    border: #333;
+}
+
+.restaurant-info h1 {
+    color: #ff5733;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bolder;
+}
+
+.restaurant-info address, .restaurant-info p {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+.banner {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    height: 300px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.img1 {
+    opacity: 1;
+}
+
+.image-container:hover .img1 {
+    opacity: 0;
+}
+
+.image-container:hover .img2 {
+    opacity: 1;
+}
+
+.banner2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.banner2 img{
+    max-width: 100%;
+    height: auto;
+}
+
+.menu {
+    text-align: center;
+    padding: 40px 0;
+    background-color: #f3d6d6;
+}
+
+.menu h2 {
+    color: #ff5733;
+    margin-bottom: 30px;
+    font-size: 24px;
+}
+
+.menu-items {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.menu-item {
+    text-align: center;
+    margin: 10px;
+}
+
+.menu-item img {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.menu-item p {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #333;
+}
+
+
+#about-us p, .ratings p, .review p {
+    color: #333;
+    line-height: 1.6;
+}
+
+#about-us{
+    background-color: #fff;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.payment{
+    margin: 20px;
+}
+.payment-methods ul{
+    list-style-type: none;
+    padding: 0;
+}
+
+.payment-methods li{
+    display: inline-block;
+    margin-right: 10px;
+    background-color: #99ebf6;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin: 20px;
+}
+
+h3{
+    font-family: FlameRegular;
+    text-transform: uppercase;
+}
+
+#nearby-restaurants .restaurants {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    
+}
+
+#nearby-restaurants{
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+}
+
+.restaurant {
+    background-color: #e1d7d7;
+    padding: 15px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(12, 11, 11, 0.1);
+}
+
+.restaurant h3 {
+    margin: 0;
+    color: #333;
+}
+
+.restaurant p {
+    margin: 15px 0;
+    color: #ff9600;
+}
+
+footer{
+    background-color: #3a3636;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+
+}
+
+.icons a{
+    margin: 0 10px;
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.icons a:hover{
+    color: #0c960e;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header nav ul li {
+        margin: 0 10px;
+    }
+
+    .menu-items {
+        flex-direction: column;
+    }
+
+    .banner, .menu, .payment, #nearby-restaurants {
+        padding: 20px;
+    }
+
+    .restaurant-info h1 {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    header nav ul img {
+        margin-right: 10px;
+        width: 50px;
+    }
+
+    .restaurant-info {
+        padding: 15px;
+    }
+
+    .menu-items {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .banner, .menu, .payment, #nearby-restaurants {
+        padding: 15px;
+    }
+}
